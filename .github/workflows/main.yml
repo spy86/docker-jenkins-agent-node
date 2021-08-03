@@ -6,7 +6,7 @@ on:
       - 'main'
 
 jobs:
-  mariadb-10-2:
+  docker-build:
     runs-on: ubuntu-latest
     steps:
       -
