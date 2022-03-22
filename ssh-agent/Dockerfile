@@ -1,4 +1,4 @@
-FROM openjdk:11-jdk-buster
+FROM openjdk:11.0-jdk-oraclelinux8
 
 ARG user=jenkins
 ARG group=jenkins
