@@ -1,5 +1,5 @@
 # Docker Jenkins Agent Node
-[![Build-Docker-Image](https://github.com/spy86/docker-jenkins-agent-node/actions/workflows/main.yml/badge.svg)](https://github.com/spy86/docker-jenkins-agent-node/actions/workflows/main.yml)
+[![docker-docker-jenkins-agent-node](https://img.shields.io/badge/spy86-docker_jenkins_agent_node-blue.svg)](https://cloud.docker.com/repository/docker/spy86/docker-jenkins-agent-node) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Jenkins agent image which allows using SSH to establish the connection, with Jenkins Controller Node. 
 
