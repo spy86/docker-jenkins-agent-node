@@ -12,7 +12,7 @@ RUN groupadd -g ${gid} ${group} \
     && useradd -d "${JENKINS_AGENT_HOME}" -u "${uid}" -g "${gid}" -m -s /bin/bash "${user}"
 
 # setup SSH server
-RUN dnf install openssh openssh-server \
+RUN yum install -y openssh openssh-server \
     && systemctl start sshd \ 
     && systemctl enable sshd
 
