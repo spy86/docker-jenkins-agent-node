@@ -1,4 +1,4 @@
-FROM openjdk:18-oracle
+FROM debian:bullseye
 
 ARG user=jenkins
 ARG group=jenkins
@@ -12,9 +12,9 @@ RUN groupadd -g ${gid} ${group} \
     && useradd -d "${JENKINS_AGENT_HOME}" -u "${uid}" -g "${gid}" -m -s /bin/bash "${user}"
 
 # setup SSH server
-RUN yum install -y openssh openssh-server \
-    && systemctl start sshd \ 
-    && systemctl enable sshd
+RUN apt-get update \
+    && apt-get install --no-install-recommends -y openssh-server git-lfs \
+    && rm -rf /var/lib/apt/lists/
 
 RUN sed -i /etc/ssh/sshd_config \
         -e 's/#PermitRootLogin.*/PermitRootLogin no/' \
